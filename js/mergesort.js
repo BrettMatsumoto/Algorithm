@@ -38,3 +38,6 @@ function merge(leftArr, rightArr) {
   return sorted;
 }
 console.log(mergeSort(arrayGenerator()))
+
+
+//I understand the concept of these algorithms and what they are supposed to do but I couldn't convert it into code. Besides the arrayGenerator function, none of the code that's doing the sorting is my own creation.
