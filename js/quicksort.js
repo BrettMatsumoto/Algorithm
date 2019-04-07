@@ -1,7 +1,7 @@
 function arrayGenerator() {
   let randomArray = [];
   for (let i = 0; i < 10; i++) {
-    let randomNumber = Math.floor(Math.random() * 10);
+    let randomNumber = Math.floor(Math.random() * 100);
     randomArray.push(randomNumber);
   }
   console.log('testArr:', randomArray)
@@ -9,31 +9,24 @@ function arrayGenerator() {
 }
 
 function quickSort(arr) {
-  let smaller = [];
-  let bigger = [];
-  let pivot = [arr.pop()];
-  let retArr = smaller + pivot + bigger
-  console.log('retArr', retArr)
-  // if ()
-  for (let i = 0; i < arr.length; i++) {
-    if (pivot[0] < arr[i]) {
-      bigger.push(arr[i]);
-    }
-    if (pivot[0] > arr[i]) {
-      smaller.push(arr[i]);
-    }
+  if (arr.length <= 1) {
+    return arr;
   }
 
-  // quickSort(bigger);
-  // quickSort(smaller);
-  console.log('pivot', pivot);
-  console.log('bigger', bigger);
-  console.log('smaller', smaller);
-  console.log('retArr', retArr)
-  return retArr
+  let pivot = arr[0];
 
+  let left = [];
+  let right = [];
 
-
-
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i])
+    }
+    if (arr[i] > pivot) {
+      right.push(arr[i])
+    }
+  }
+  return quickSort(left).concat(pivot, quickSort(right));
 }
-quickSort(arrayGenerator())
+
+console.log(quickSort(arrayGenerator()));
