@@ -4,7 +4,7 @@ function arrayGenerator() {
     let randomNumber = Math.floor(Math.random() * 100);
     randomArray.push(randomNumber);
   }
-  console.log('testArr:', randomArray)
+  // console.log('testArr:', randomArray)
   return randomArray
 }
 
@@ -29,7 +29,6 @@ function quickSort(arr) {
   return quickSort(left).concat(pivot, quickSort(right));
 }
 
-console.log(quickSort(arrayGenerator()));
+// console.log(quickSort(arrayGenerator()));
 
 
-//I understand the concept of these algorithms and what they are supposed to do but I couldn't convert it into code. Besides the arrayGenerator function, none of the code that's doing the sorting is my own creation.

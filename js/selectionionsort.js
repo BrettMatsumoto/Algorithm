@@ -9,8 +9,8 @@ function arrayGenerator() {
 }
 
 function swap(arr, i, j){
-  let temp = arr[i];
-  arr[i] = arr[j];
+  let temp = arr[i]; //sets temp variable to the value of index 'i' of the array
+  arr[i] = arr[j]; //sets 
   arr[j] = temp;
 }
 
@@ -32,4 +32,4 @@ function selectionSort(arr){
 console.log(selectionSort(arrayGenerator()))
 
 
-//I understand the concept of these algorithms and what they are supposed to do but I couldn't convert it into code. Besides the arrayGenerator function, none of the code that's doing the sorting is my own creation.
+/
